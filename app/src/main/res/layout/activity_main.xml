@@ -63,7 +63,7 @@
         android:layout_marginTop="41dp"
         android:text="OK"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Confirm01" />
+        app:layout_constraintTop_toBottomOf="@+id/tvConfirm" />
 
     <Button
         android:id="@+id/Clear"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/Username01"
+        android:id="@+id/tvUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="42dp"
@@ -87,7 +87,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/Password01"
+        android:id="@+id/tvPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="41dp"
@@ -95,10 +95,10 @@
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintStart_toEndOf="@+id/Password"
-        app:layout_constraintTop_toBottomOf="@+id/Username01" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
 
     <EditText
-        android:id="@+id/Confirm01"
+        android:id="@+id/tvConfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="58dp"
@@ -106,7 +106,7 @@
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintStart_toEndOf="@+id/Confirm"
-        app:layout_constraintTop_toBottomOf="@+id/Password01" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPassword" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,21 +10,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val text01 = Toast.makeText(applicationContext,"Please don't enter same username and password.",Toast.LENGTH_LONG)
-        val text02 = Toast.makeText(applicationContext,"Password in both fields is different.",Toast.LENGTH_LONG)
-        val text03 = Toast.makeText(applicationContext,"Please fill the empty fields.",Toast.LENGTH_LONG)
-        val text04 = Toast.makeText(applicationContext,"Register successful.",Toast.LENGTH_LONG)
+        val text01 = Toast.makeText(applicationContext,"Username and password must not be the same.",Toast.LENGTH_LONG)
+        val text02 = Toast.makeText(applicationContext,"Password do not match.",Toast.LENGTH_LONG)
+        val text03 = Toast.makeText(applicationContext,"Fill out all fields.",Toast.LENGTH_LONG)
+        val text04 = Toast.makeText(applicationContext,"OK.",Toast.LENGTH_LONG)
+        val text05 = Toast.makeText(applicationContext,"Complete.",Toast.LENGTH_LONG)
 
         OK.setOnClickListener(){
-            if (this.Username01.text.toString() == "" || this.Password01.text.toString() == "" || this.Confirm01.text.toString() == ""){
+            if (this.tvUsername.text.toString() == "" || this.tvPassword.text.toString() == "" || this.tvConfirm.text.toString() == ""){
                 text03.show()
         }
             else{
-                if (this.Username01.text.toString() == this.Password01.text.toString() || this.Username01.text.toString() == this.Confirm01.text.toString() ||
-            this.Username01.text.toString() == this.Password01.text.toString() && this.Username01.text.toString() == this.Confirm01.text.toString()){
+                if (this.tvUsername.text.toString() == this.tvPassword.text.toString() || this.tvUsername.text.toString() == this.tvConfirm.text.toString() ||
+            this.tvUsername.text.toString() == this.tvPassword.text.toString() && this.tvUsername.text.toString() == this.tvConfirm.text.toString()){
                     text01.show()
                 }
-                else if (this.Password01.text.toString() == this.Confirm01.text.toString()){
+                else if (this.tvPassword.text.toString() == this.tvConfirm.text.toString()){
                     text04.show()
                 }
                 else{
@@ -34,9 +35,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         Clear.setOnClickListener(){
-            Username01.setText(null)
-            Password01.setText(null)
-            Confirm01.setText(null)
+            tvUsername.setText(null)
+            tvPassword.setText(null)
+            tvConfirm.setText(null)
+            text05.show()
         }
 
     }
